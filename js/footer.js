@@ -6,18 +6,15 @@
     html += '<div class="flex flex-col md:flex-row justify-between items-center px-gutter max-w-container-max mx-auto gap-stack-md">';
     html += '<div class="space-y-1 text-center md:text-left">';
     html += '<span class="font-h3 text-h3 text-primary">Marathi NLP</span>';
-    html += '<p class="font-label-caps text-label-caps text-secondary dark:text-secondary-fixed-dim uppercase">\u00A9 2024 Marathi NLP Research Consortium</p>';
+    html += '<p class="font-label-caps text-label-caps text-secondary dark:text-secondary-fixed-dim uppercase">\u00A9 2026 Marathi NLP Research Consortium</p>';
     html += '</div>';
     html += '<div class="flex flex-wrap justify-center gap-6">';
-    html += '<a class="text-secondary dark:text-secondary-fixed-dim font-label-caps text-label-caps hover:text-on-tertiary-container transition-colors" href="#">GitHub Repository</a>';
+    html += '<a class="text-secondary dark:text-secondary-fixed-dim font-label-caps text-label-caps hover:text-on-tertiary-container transition-colors" href="https://github.com/harshgahankar/marathi-legal-financial-nlp" target="_blank" rel="noopener noreferrer">GitHub Repository</a>';
     html += '<a class="text-secondary dark:text-secondary-fixed-dim font-label-caps text-label-caps hover:text-on-tertiary-container transition-colors" href="#">PDF Documentation</a>';
     html += '<a class="text-secondary dark:text-secondary-fixed-dim font-label-caps text-label-caps hover:text-on-tertiary-container transition-colors" href="#">Contact Us</a>';
     html += '<a class="text-secondary dark:text-secondary-fixed-dim font-label-caps text-label-caps hover:text-on-tertiary-container transition-colors" href="#">Privacy Policy</a>';
     html += '</div>';
-    html += '<div class="flex gap-4">';
-    html += '<span class="w-8 h-8 rounded-full bg-surface-container-highest dark:bg-surface-variant flex items-center justify-center cursor-pointer hover:bg-primary hover:text-white transition-all"><span class="material-symbols-outlined text-sm">code</span></span>';
-    html += '<span class="w-8 h-8 rounded-full bg-surface-container-highest dark:bg-surface-variant flex items-center justify-center cursor-pointer hover:bg-primary hover:text-white transition-all"><span class="material-symbols-outlined text-sm">share</span></span>';
-    html += '</div>';
+
     html += '</div>';
     container.innerHTML = html;
 })();

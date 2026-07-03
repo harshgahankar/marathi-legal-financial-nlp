@@ -1,0 +1,50 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 1869 >>
+stream
+BT /F1 18 Tf 50 760 Td (IndicGLUE-Marathi - Sample Records) Tj ET
+BT /F1 9 Tf 50 735 Td (IndicGLUE Benchmark | Format: id|text|label|task) Tj ET
+BT /F1 9 Tf 50 720 Td (----------------------------------------------------------------------------------------------------) Tj ET
+BT /F1 9 Tf 50 695 Td (1|हा चित्रपट खूपच उत्कृष्ट आहे. अभिनय आणि दिग्दर्शन अप्रतिम. |positive| sentiment analysis) Tj ET
+BT /F1 9 Tf 50 681 Td (2|या शहरातील वाहतूक व्यवस्था सुधारण्याची गरज आहे. |neutral| sentiment analysis) Tj ET
+BT /F1 9 Tf 50 667 Td (3|उत्पादनाची गुणवत्ता अपेक्षेपेक्षा खूपच खालावली |negative| sentiment analysis) Tj ET
+BT /F1 9 Tf 50 653 Td (4|मुंबई ही महाराष्ट्राची राजधानी आहे. |neutral| fact) Tj ET
+BT /F1 9 Tf 50 639 Td (5|[मुंबई] ची लोकसंख्या २ कोटींपेक्षा जास्त आहे. |B-LOC| named entity recognition) Tj ET
+BT /F1 9 Tf 50 625 Td (6|[राहुल गांधी] यांनी नवी मुंबईत सभा घेतली. |B-PER| named entity recognition) Tj ET
+BT /F1 9 Tf 50 611 Td (7|[टाटा समूह] ने नवीन उत्पादन लाँच केले. |B-ORG| named entity recognition) Tj ET
+BT /F1 9 Tf 50 597 Td (8|या कादंबरीतील पात्रे अत्यंत वास्तववादी आहेत. |positive| sentiment analysis) Tj ET
+BT /F1 9 Tf 50 583 Td (9|सरकारने [महाराष्ट्र] मध्ये नवीन योजना सुरू केली |B-LOC| named entity recognition) Tj ET
+BT /F1 9 Tf 50 569 Td (10|कंपनीचे उत्पन्न मागील वर्षीपेक्षा कमी आहे. |negative| sentiment analysis) Tj ET
+BT /F1 9 Tf 50 555 Td (11|प्रश्न: मुंबईची राजधानी कोणती? उत्तर: महाराष्ट्र |qa| question answering) Tj ET
+BT /F1 9 Tf 50 541 Td (12|या ठिकाणचे नैसर्गिक सौंदर्य अवर्णनीय आहे. |positive| sentiment analysis) Tj ET
+BT /F1 9 Tf 50 527 Td (13|[न्यायालय] ने महत्त्वपूर्ण निर्णय दिला. |B-ORG| named entity recognition) Tj ET
+BT /F1 9 Tf 50 513 Td (14|या पुस्तकाचे लेखक [ज्ञानेश्वर] आहेत. |B-PER| named entity recognition) Tj ET
+BT /F1 9 Tf 50 499 Td (15|रस्त्यांची दुरवस्था ही मोठी समस्या आहे. |negative| sentiment analysis) Tj ET
+
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000266 00000 n 
+0000000396 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+2329
+%%EOF

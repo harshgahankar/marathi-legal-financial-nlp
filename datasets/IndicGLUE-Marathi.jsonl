@@ -1,0 +1,5 @@
+{"text": "हा चित्रपट खूपच उत्कृष्ट आहे. अभिनय आणि दिग्दर्शन दोन्हीही अप्रतिम.", "label": "positive", "task": "sentiment", "id": "MR-GLUE-00001"}
+{"text": "या कादंबरीतील पात्रे अत्यंत वास्तववादी चित्रित केली आहेत.", "label": "positive", "task": "sentiment", "id": "MR-GLUE-00002"}
+{"text": "या शहरातील वाहतूक व्यवस्था सुधारण्याची गरज आहे.", "label": "neutral", "task": "sentiment", "id": "MR-GLUE-00003"}
+{"text": "उत्पादनाची गुणवत्ता अपेक्षेपेक्षा खूपच खालावली आहे.", "label": "negative", "task": "sentiment", "id": "MR-GLUE-00004"}
+{"text": "मुंबई हे महाराष्ट्राची राजधानीचे शहर आहे.", "label": "neutral", "task": "sentiment", "id": "MR-GLUE-00005"}

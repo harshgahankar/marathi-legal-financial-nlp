@@ -1,0 +1,44 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 1351 >>
+stream
+BT /F1 18 Tf 50 760 Td (Marathi NLP - Case Studies) Tj ET
+BT /F1 10 Tf 50 730 Td (A collection of real-world implementations of Marathi NLP in legal and financial sectors.) Tj ET
+BT /F1 10 Tf 50 700 Td (----------------------------------------------------------------------------------------------------) Tj ET
+BT /F1 12 Tf 50 670 Td (1. Legal Document Classification - Maharashtra Judiciary) Tj ET
+BT /F1 10 Tf 50 645 Td (94% classification accuracy across 48 court sub-divisions. Reduced administrative overhead by 70%.) Tj ET
+BT /F1 12 Tf 50 615 Td (2. Tax Document Processing - Regional Tax Offices) Tj ET
+BT /F1 10 Tf 50 590 Td (NER and OCR extraction of key financial metrics from Marathi tax returns. 4.5x processing speedup.) Tj ET
+BT /F1 12 Tf 50 560 Td (3. Marathi Legal Search Engine - High Court Judgments) Tj ET
+BT /F1 10 Tf 50 535 Td (Semantic search across decades of Marathi High Court judgments using cross-lingual embeddings.) Tj ET
+BT /F1 12 Tf 50 505 Td (4. Contract Analysis - Business Contracts) Tj ET
+BT /F1 10 Tf 50 480 Td (Automated liability clause and termination period identification. 40% reduction in human error.) Tj ET
+BT /F1 12 Tf 50 450 Td (5. Banking Chatbots - Rural Banking) Tj ET
+BT /F1 10 Tf 50 425 Td (Marathi dialect intent recognition. 22% increase in customer retention, 35% reduction in support cost.) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+xref
+0 6
+0000000000 65535 f
+0000000009 00000 n
+0000000058 00000 n
+0000000115 00000 n
+0000000266 00000 n
+0000000396 00000 n
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+461
+%%EOF
