@@ -1,0 +1,268 @@
+<!-- Home - Marathi NLP Portal -->
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Marathi NLP Portal - Research Hub</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Poppins:wght@600;700&amp;family=IBM+Plex+Sans:wght@400;500&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#ffffff", "error": "#ba1a1a", "primary-fixed": "#dae2fd",
+                        "on-secondary-fixed": "#111c2d", "tertiary": "#10B981", "secondary": "#545f73",
+                        "secondary-container": "#d5e0f8", "outline": "#76777d", "surface-container-lowest": "#ffffff",
+                        "surface-container": "#f0edef", "on-primary": "#ffffff", "outline-variant": "#c6c6cd",
+                        "on-tertiary-fixed": "#271901", "on-primary-fixed": "#131b2e", "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#574425", "tertiary-container": "#271901",
+                        "secondary-fixed": "#d8e3fb", "surface-container-highest": "#e4e2e4",
+                        "inverse-primary": "#bec6e0", "surface-bright": "#fcf8fa", "tertiary-fixed-dim": "#dec29a",
+                        "primary-fixed-dim": "#bec6e0", "error-container": "#ffdad6", "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#f3f0f2", "on-tertiary-container": "#98805d",
+                        "on-secondary-container": "#586377", "surface-dim": "#dcd9db", "on-background": "#1b1b1d",
+                        "primary": "#0F172A", "surface-tint": "#565e74", "background": "#fcf8fa",
+                        "surface-variant": "#e4e2e4", "on-primary-container": "#7c839b",
+                        "surface-container-low": "#f6f3f5", "primary-container": "#131b2e",
+                        "inverse-surface": "#303032", "on-secondary-fixed-variant": "#3c475a",
+                        "on-error-container": "#93000a", "on-primary-fixed-variant": "#3f465c",
+                        "surface": "#fcf8fa", "on-surface-variant": "#45464d", "tertiary-fixed": "#fcdeb5",
+                        "surface-container-high": "#eae7e9", "on-surface": "#1b1b1d",
+                        "secondary-fixed-dim": "#bcc7de", "emerald-accent": "#10B981"
+                    },
+                    "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                    "spacing": { "stack-sm": "8px", "stack-lg": "32px", "stack-md": "16px", "margin-mobile": "16px", "gutter": "24px", "container-max": "1200px", "sidebar-width": "280px" },
+                    "fontFamily": { "body-md": ["Inter"], "h3": ["Poppins"], "h1-mobile": ["Poppins"], "code-data": ["IBM Plex Sans"], "h2": ["Poppins"], "display": ["Poppins"], "label-caps": ["Inter"], "body-lg": ["Inter"], "h1": ["Poppins"] },
+                    "fontSize": { "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }], "h3": ["18px", { "lineHeight": "1.4", "fontWeight": "600" }], "h1-mobile": ["24px", { "lineHeight": "1.2", "fontWeight": "600" }], "code-data": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }], "h2": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }], "display": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }], "h1": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }] }
+                },
+            },
+        }
+    </script>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+    <nav class="bg-surface dark:bg-inverse-surface shadow-sm docked full-width top-0 sticky z-50 h-16">
+        <div id="header-inner"></div>
+    </nav>
+    <div class="flex max-w-container-max mx-auto min-h-screen relative">
+        <aside
+            class="fixed left-0 top-16 h-[calc(100vh-64px)] w-sidebar-width bg-surface-container-low border-r border-outline-variant hidden lg:flex flex-col z-40 transition-transform duration-300 overflow-y-auto hide-scrollbar">
+            <div id="sidebar-inner"></div>
+        </aside>
+        <main class="flex-1 lg:ml-sidebar-width min-h-screen flex flex-col">
+            <div class="max-w-container-max mx-auto px-gutter w-full mb-stack-lg">
+            <section class="grid lg:grid-cols-2 gap-stack-lg items-center py-stack-lg mb-12">
+                <div class="fade-in" style="animation-delay: 0.1s;">
+                    <span
+                        class="inline-block px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full font-label-caps text-label-caps mb-4">ACADEMIC
+                        RESEARCH HUB</span>
+                    <h1 class="font-h1 text-h1 lg:text-display lg:font-display text-primary leading-tight mb-stack-md">
+                        Natural Language Processing for Marathi Legal &amp; Financial Document Analysis
+                    </h1>
+                    <p class="font-body-lg text-body-lg text-secondary mb-stack-lg">
+                        Understanding Marathi Legal and Financial Documents through state-of-the-art NLP techniques. A
+                        collaborative platform for linguistic research and structural analysis.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <button
+                            class="bg-primary text-on-primary px-8 py-3 rounded-lg font-bold flex items-center gap-2 hover:opacity-90 transition-opacity">
+                            Explore Repository
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </button>
+                        <button
+                            class="bg-white border-2 border-primary text-primary px-8 py-3 rounded-lg font-bold flex items-center gap-2 hover:bg-surface-container transition-colors">
+                            View Workflow
+                            <span class="material-symbols-outlined">account_tree</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="fade-in relative" style="animation-delay: 0.3s;">
+                    <div class="rounded-2xl overflow-hidden shadow-2xl bg-white border border-outline-variant p-4">
+                        <img alt="Marathi NLP Research Portal Hero Image" class="w-full h-auto object-cover rounded-xl"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHkvaaT0jjxxAhPL0MxONhnMk-5u9dEsX2BvMt4r3XJvLw5_NolNmexyadsvYoRPgZlUq0StaavUKdjdixe4HrTjY920CJ3ZgCEWZoqtODuMMJUQNqjOJl_pbBW-g6P5NHZiExM_MqNr9cNYOcx9N4-nhlgG-35v0MkiLouOl_8bwUDHByDgEI_7N2OSCtxZJFxrJRojfZQyttcTOVeseHEkLxwcMEOdQifCHUVxIuimXPd83_-zepHA" />
+                    </div>
+                    <div
+                        class="absolute -bottom-6 -left-6 w-32 h-32 bg-secondary-container rounded-full opacity-50 -z-10 blur-2xl">
+                    </div>
+                    <div
+                        class="absolute -top-6 -right-6 w-48 h-48 bg-primary-fixed rounded-full opacity-30 -z-10 blur-2xl">
+                    </div>
+                </div>
+            </section>
+            <section class="mb-stack-lg">
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-stack-md">
+                    <div class="slide-up bg-white p-stack-md rounded-xl shadow-sm border border-outline-variant card-hover transition-all"
+                        style="animation-delay: 0.4s;">
+                        <span class="material-symbols-outlined text-emerald-accent mb-2">menu_book</span>
+                        <h4 class="text-display font-display text-emerald-accent" style="font-size: 36px">20+</h4>
+                        <p class="text-secondary font-label-caps">NLP CONCEPTS</p>
+                    </div>
+                    <div class="slide-up bg-white p-stack-md rounded-xl shadow-sm border border-outline-variant card-hover transition-all"
+                        style="animation-delay: 0.5s;">
+                        <span class="material-symbols-outlined text-emerald-accent mb-2">settings_applications</span>
+                        <h4 class="text-display font-display text-emerald-accent" style="font-size: 36px">5+</h4>
+                        <p class="text-secondary font-label-caps">APPLICATIONS</p>
+                    </div>
+                    <div class="slide-up bg-white p-stack-md rounded-xl shadow-sm border border-outline-variant card-hover transition-all"
+                        style="animation-delay: 0.6s;">
+                        <span class="material-symbols-outlined text-emerald-accent mb-2">account_tree</span>
+                        <h4 class="text-display font-display text-emerald-accent" style="font-size: 36px">3</h4>
+                        <p class="text-secondary font-label-caps">WORKFLOWS</p>
+                    </div>
+                    <div class="slide-up bg-white p-stack-md rounded-xl shadow-sm border border-outline-variant card-hover transition-all"
+                        style="animation-delay: 0.7s;">
+                        <span class="material-symbols-outlined text-emerald-accent mb-2">lightbulb</span>
+                        <div class="mt-2">
+                            <h4 class="text-h3 font-h3 text-primary">Research</h4>
+                            <p class="text-secondary font-label-caps">INSIGHTS</p>
+                        </div>
+                    </div>
+                    <div class="slide-up bg-white p-stack-md rounded-xl shadow-sm border border-outline-variant card-hover transition-all"
+                        style="animation-delay: 0.8s;">
+                        <span class="material-symbols-outlined text-emerald-accent mb-2">work</span>
+                        <div class="mt-2">
+                            <h4 class="text-h3 font-h3 text-primary">Industry</h4>
+                            <p class="text-secondary font-label-caps">USE CASES</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="py-stack-lg border-t border-outline-variant mt-stack-lg">
+                <div class="flex justify-between items-end mb-stack-lg">
+                    <div>
+                        <h2 class="font-h2 text-h2 text-primary">Core Research Domains</h2>
+                        <p class="text-secondary">Specialized processing pipelines for domain-specific Marathi corpora.
+                        </p>
+                    </div>
+                    <a class="text-primary font-bold flex items-center gap-1 hover:underline" href="pages/comparisons.html">
+                        Explore all domains
+                        <span class="material-symbols-outlined text-sm">north_east</span>
+                    </a>
+                </div>
+                <div class="grid md:grid-cols-2 gap-stack-md">
+                    <div
+                        class="group bg-white rounded-xl border border-outline-variant overflow-hidden hover:border-primary transition-all duration-300">
+                        <div class="p-stack-md flex gap-stack-md">
+                            <div
+                                class="w-16 h-16 shrink-0 bg-primary-container rounded-lg flex items-center justify-center text-on-primary-container">
+                                <span class="material-symbols-outlined" style="font-size: 32px">gavel</span>
+                            </div>
+                            <div>
+                                <h3
+                                    class="font-h3 text-h3 text-primary group-hover:text-primary-fixed-dim transition-colors">
+                                    Legal Corpus Analysis</h3>
+                                <p class="text-body-md text-secondary mt-1">Extraction of legal entities, case
+                                    precedents, and jurisdictional clauses from Marathi court documents.</p>
+                                <div class="mt-4 flex flex-wrap gap-2">
+                                    <span
+                                        class="px-2 py-1 bg-surface-container-high rounded text-xs font-code-data">Named
+                                        Entity Recognition</span>
+                                    <span
+                                        class="px-2 py-1 bg-surface-container-high rounded text-xs font-code-data">Legal
+                                        Ontologies</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="group bg-white rounded-xl border border-outline-variant overflow-hidden hover:border-primary transition-all duration-300">
+                        <div class="p-stack-md flex gap-stack-md">
+                            <div
+                                class="w-16 h-16 shrink-0 bg-secondary-container rounded-lg flex items-center justify-center text-on-secondary-container">
+                                <span class="material-symbols-outlined" style="font-size: 32px">payments</span>
+                            </div>
+                            <div>
+                                <h3
+                                    class="font-h3 text-h3 text-primary group-hover:text-primary-fixed-dim transition-colors">
+                                    Financial Semantic Structuring</h3>
+                                <p class="text-body-md text-secondary mt-1">Linguistic parsing of banking statements,
+                                    tax forms, and economic reports for data warehousing.</p>
+                                <div class="mt-4 flex flex-wrap gap-2">
+                                    <span
+                                        class="px-2 py-1 bg-surface-container-high rounded text-xs font-code-data">Numerical
+                                        Tagging</span>
+                                    <span
+                                        class="px-2 py-1 bg-surface-container-high rounded text-xs font-code-data">Sentiment
+                                        Analysis</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="mt-stack-lg py-stack-lg">
+                <div class="mb-stack-md">
+                    <h2 class="font-h2 text-h2 text-primary">Standardized Marathi NLP Pipeline</h2>
+                    <p class="text-secondary">A modular workflow for processing Indic scripts with semantic precision.
+                    </p>
+                </div>
+                <div class="scroll-container overflow-x-auto pb-4">
+                    <div class="flex items-center gap-stack-md min-w-[800px]">
+                        <div class="flex-1 bg-white border border-outline-variant p-4 rounded-lg shadow-sm text-center">
+                            <div class="font-label-caps text-secondary mb-2">STAGE 01</div>
+                            <div class="font-code-data font-bold text-primary">Pre-processing</div>
+                            <div class="text-xs text-secondary mt-1">Tokenization &amp; Cleaning</div>
+                        </div>
+                        <span class="material-symbols-outlined text-secondary">arrow_forward</span>
+                        <div
+                            class="flex-1 bg-white border border-outline-variant p-4 rounded-lg shadow-sm text-center ring-2 ring-primary">
+                            <div class="font-label-caps text-secondary mb-2">STAGE 02</div>
+                            <div class="font-code-data font-bold text-primary">Morphological Analysis</div>
+                            <div class="text-xs text-secondary mt-1">Root Word Mapping</div>
+                        </div>
+                        <span class="material-symbols-outlined text-secondary">arrow_forward</span>
+                        <div class="flex-1 bg-white border border-outline-variant p-4 rounded-lg shadow-sm text-center">
+                            <div class="font-label-caps text-secondary mb-2">STAGE 03</div>
+                            <div class="font-code-data font-bold text-primary">Syntax Parsing</div>
+                            <div class="text-xs text-secondary mt-1">Dependency Tree Generation</div>
+                        </div>
+                        <span class="material-symbols-outlined text-secondary">arrow_forward</span>
+                        <div class="flex-1 bg-primary text-on-primary p-4 rounded-lg shadow-md text-center">
+                            <div class="font-label-caps text-on-primary opacity-80 mb-2">OUTPUT</div>
+                            <div class="font-code-data font-bold">Semantic JSON</div>
+                            <div class="text-xs opacity-80 mt-1">Analysis Ready Data</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    </div>
+    <footer class="bg-surface-container dark:bg-inverse-surface w-full py-stack-lg mt-auto lg:ml-sidebar-width"><div id="footer-inner"></div></footer>
+    </main>
+    <button
+        class="fixed bottom-8 right-8 w-14 h-14 bg-emerald-accent text-white rounded-full shadow-lg flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-50">
+        <span class="material-symbols-outlined">add</span>
+    </button>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.slide-up').forEach(el => observer.observe(el));
+    </script>
+    <script>window.__activePage = 'home'; window.__basePath = '.';</script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/search.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+<!-- Concepts Landing - Marathi NLP Portal -->
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Core Concepts | Marathi NLP Portal</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#ffffff", "error": "#ba1a1a", "primary-fixed": "#dae2fd",
+                        "on-secondary-fixed": "#111c2d", "tertiary": "#10B981", "secondary": "#545f73",
+                        "secondary-container": "#d5e0f8", "outline": "#76777d", "surface-container-lowest": "#ffffff",
+                        "surface-container": "#f0edef", "on-primary": "#ffffff", "outline-variant": "#c6c6cd",
+                        "on-tertiary-fixed": "#271901", "on-primary-fixed": "#131b2e", "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#574425", "tertiary-container": "#271901",
+                        "secondary-fixed": "#d8e3fb", "surface-container-highest": "#e4e2e4",
+                        "inverse-primary": "#bec6e0", "surface-bright": "#fcf8fa", "tertiary-fixed-dim": "#dec29a",
+                        "primary-fixed-dim": "#bec6e0", "error-container": "#ffdad6", "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#f3f0f2", "on-tertiary-container": "#98805d",
+                        "on-secondary-container": "#586377", "surface-dim": "#dcd9db", "on-background": "#1b1b1d",
+                        "primary": "#0F172A", "surface-tint": "#565e74", "background": "#fcf8fa",
+                        "surface-variant": "#e4e2e4", "on-primary-container": "#7c839b",
+                        "surface-container-low": "#f6f3f5", "primary-container": "#131b2e",
+                        "inverse-surface": "#303032", "on-secondary-fixed-variant": "#3c475a",
+                        "on-error-container": "#93000a", "on-primary-fixed-variant": "#3f465c",
+                        "surface": "#fcf8fa", "on-surface-variant": "#45464d", "tertiary-fixed": "#fcdeb5",
+                        "surface-container-high": "#eae7e9", "on-surface": "#1b1b1d",
+                        "secondary-fixed-dim": "#bcc7de", "emerald-accent": "#10B981"
+                    },
+                    "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                    "spacing": { "stack-sm": "8px", "stack-lg": "32px", "stack-md": "16px", "margin-mobile": "16px", "gutter": "24px", "container-max": "1200px", "sidebar-width": "280px" },
+                    "fontFamily": { "body-md": ["Inter"], "h3": ["Poppins"], "h1-mobile": ["Poppins"], "code-data": ["IBM Plex Sans"], "h2": ["Poppins"], "display": ["Poppins"], "label-caps": ["Inter"], "body-lg": ["Inter"], "h1": ["Poppins"] },
+                    "fontSize": { "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }], "h3": ["18px", { "lineHeight": "1.4", "fontWeight": "600" }], "h1-mobile": ["24px", { "lineHeight": "1.2", "fontWeight": "600" }], "code-data": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }], "h2": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }], "display": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }], "h1": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }] }
+                },
+            },
+        }
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../css/styles.css" />
+</head>
+
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+    <nav class="bg-surface dark:bg-inverse-surface shadow-sm docked full-width top-0 sticky z-50 h-16">
+        <div id="header-inner"></div>
+    </nav>
+    <div class="flex max-w-container-max mx-auto min-h-screen relative">
+        <aside
+            class="hidden lg:flex flex-col gap-stack-sm p-stack-md border-r border-outline-variant bg-surface-container-low dark:bg-surface-container-lowest fixed left-0 top-16 h-[calc(100vh-64px)] w-sidebar-width overflow-y-auto hide-scrollbar">
+            <div id="sidebar-inner"></div>
+        </aside>
+        <main class="flex-1 lg:ml-sidebar-width px-gutter py-stack-lg max-w-full overflow-x-hidden">
+            <div class="max-w-container-max mx-auto space-y-stack-lg">
+                <header class="space-y-4">
+                    <span class="text-label-caps text-secondary uppercase tracking-wider">Core NLP Concepts</span>
+                    <h1 class="font-h1 text-h1 text-primary">NLP Concepts for Marathi</h1>
+                    <p class="font-body-lg text-body-lg text-secondary max-w-3xl">
+                        Foundational techniques and theories that power Marathi legal and financial document analysis.
+                        Explore each concept area below.
+                    </p>
+                </header>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-stack-lg">
+                    <a href="preprocessing.html"
+                        class="group bg-white rounded-xl border border-outline-variant p-stack-lg hover:border-primary transition-all duration-300 card-hover">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container">
+                                <span class="material-symbols-outlined">data_object</span>
+                            </div>
+                            <div>
+                                <h3 class="font-h3 text-h3 text-primary group-hover:text-primary-fixed-dim transition-colors">Text Preprocessing</h3>
+                                <p class="text-label-caps text-secondary">Segmentation &amp; Normalization</p>
+                            </div>
+                        </div>
+                        <p class="text-body-md text-secondary leading-relaxed">
+                            Cleaning and preparing raw Marathi text for computational analysis — tokenization, Unicode normalization, stopword removal, and noise reduction.
+                        </p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-surface-container-high rounded text-xs font-code-data">Tokenization</span>
+                            <span class="px-2 py-1 bg-surface-container-high rounded text-xs font-code-data">Unicode Normalization</span>
+                            <span class="px-2 py-1 bg-surface-container-high rounded text-xs font-code-data">Stopword Removal</span>
+                        </div>
+                    </a>
+                    <a href="feature-engineering.html"
+                        class="group bg-white rounded-xl border border-outline-variant p-stack-lg hover:border-primary transition-all duration-300 card-hover">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-secondary-container flex items-center justify-center text-on-secondary-container">
+                                <span class="material-symbols-outlined">calculate</span>
+                            </div>
+                            <div>
+                                <h3 class="font-h3 text-h3 text-primary group-hover:text-primary-fixed-dim transition-colors">Feature Engineering</h3>
+                                <p class="text-label-caps text-secondary">Extraction &amp; Selection</p>
+                            </div>
+                        </div>
+                        <p class="text-body-md text-secondary leading-relaxed">
+                            Transforming raw text into numerical features — TF-IDF, morphological analysis, POS tagging, and dependency parsing for Marathi.
+                        </p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-surface-container-high rounded text-xs font-code-data">TF-IDF</span>
+                            <span class="px-2 py-1 bg-surface-container-high rounded text-xs font-code-data">POS Tagging</span>
+                            <span class="px-2 py-1 bg-surface-container-high rounded text-xs font-code-data">Dependency Parsing</span>
+                        </div>
+                    </a>
+                    <a href="language-representation.html"
+                        class="group bg-white rounded-xl border border-outline-variant p-stack-lg hover:border-primary transition-all duration-300 card-hover">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-primary-fixed-dim flex items-center justify-center text-on-primary">
+                                <span class="material-symbols-outlined">hub</span>
+                            </div>
+                            <div>
+                                <h3 class="font-h3 text-h3 text-primary group-hover:text-primary-fixed-dim transition-colors">Language Representation</h3>
+                                <p class="text-label-caps text-secondary">Embeddings &amp; Vectors</p>
+                            </div>
+                        </div>
+                        <p class="text-body-md text-secondary leading-relaxed">
+                            Dense and sparse vector representations — Word2Vec, FastText, and contextual embeddings tailored for Marathi's agglutinative morphology.
+                        </p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-surface-container-high rounded text-xs font-code-data">Word2Vec</span>
+                            <span class="px-2 py-1 bg-surface-container-high rounded text-xs font-code-data">FastText</span>
+                            <span class="px-2 py-1 bg-surface-container-high rounded text-xs font-code-data">Contextual Embeddings</span>
+                        </div>
+                    </a>
+                    <a href="language-models.html"
+                        class="group bg-white rounded-xl border border-outline-variant p-stack-lg hover:border-primary transition-all duration-300 card-hover">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-tertiary-container flex items-center justify-center text-on-tertiary">
+                                <span class="material-symbols-outlined">psychology</span>
+                            </div>
+                            <div>
+                                <h3 class="font-h3 text-h3 text-primary group-hover:text-primary-fixed-dim transition-colors">Language Models</h3>
+                                <p class="text-label-caps text-secondary">Statistical &amp; Neural</p>
+                            </div>
+                        </div>
+                        <p class="text-body-md text-secondary leading-relaxed">
+                            From n-gram models to Transformers — IndicBERT, MuRIL, and GPT-based architectures for Marathi language understanding.
+                        </p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-surface-container-high rounded text-xs font-code-data">N-gram</span>
+                            <span class="px-2 py-1 bg-surface-container-high rounded text-xs font-code-data">IndicBERT</span>
+                            <span class="px-2 py-1 bg-surface-container-high rounded text-xs font-code-data">Transformers</span>
+                        </div>
+                    </a>
+                </div>
+                <section class="bg-primary-container text-on-primary-fixed rounded-xl p-stack-lg mt-stack-lg">
+                    <h2 class="font-h2 text-h2 mb-4 text-white">Why These Concepts Matter</h2>
+                    <p class="text-body-md text-white/80 max-w-3xl">
+                        Marathi, as a highly agglutinative Indo-Aryan language with rich morphological inflections, presents unique challenges that require specialized NLP techniques. Each concept area builds upon the previous, forming a complete pipeline from raw Devanagari text to production-ready semantic analysis.
+                    </p>
+                </section>
+            </div>
+        </main>
+    </div>
+    <footer class="bg-surface-container dark:bg-inverse-surface w-full py-stack-lg mt-auto lg:ml-sidebar-width"><div id="footer-inner"></div></footer>
+    <script>window.__activePage = 'concepts'; window.__basePath = '..';</script>
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/header.js"></script>
+    <script src="../js/footer.js"></script>
+    <script src="../js/search.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,261 @@
+<!-- Applications - Marathi NLP Portal -->
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Real-World Applications | Marathi NLP Portal</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#ffffff", "error": "#ba1a1a", "primary-fixed": "#dae2fd",
+                        "on-secondary-fixed": "#111c2d", "tertiary": "#10B981", "secondary": "#545f73",
+                        "secondary-container": "#d5e0f8", "outline": "#76777d", "surface-container-lowest": "#ffffff",
+                        "surface-container": "#f0edef", "on-primary": "#ffffff", "outline-variant": "#c6c6cd",
+                        "on-tertiary-fixed": "#271901", "on-primary-fixed": "#131b2e", "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#574425", "tertiary-container": "#271901",
+                        "secondary-fixed": "#d8e3fb", "surface-container-highest": "#e4e2e4",
+                        "inverse-primary": "#bec6e0", "surface-bright": "#fcf8fa", "tertiary-fixed-dim": "#dec29a",
+                        "primary-fixed-dim": "#bec6e0", "error-container": "#ffdad6", "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#f3f0f2", "on-tertiary-container": "#98805d",
+                        "on-secondary-container": "#586377", "surface-dim": "#dcd9db", "on-background": "#1b1b1d",
+                        "primary": "#0F172A", "surface-tint": "#565e74", "background": "#fcf8fa",
+                        "surface-variant": "#e4e2e4", "on-primary-container": "#7c839b",
+                        "surface-container-low": "#f6f3f5", "primary-container": "#131b2e",
+                        "inverse-surface": "#303032", "on-secondary-fixed-variant": "#3c475a",
+                        "on-error-container": "#93000a", "on-primary-fixed-variant": "#3f465c",
+                        "surface": "#fcf8fa", "on-surface-variant": "#45464d", "tertiary-fixed": "#fcdeb5",
+                        "surface-container-high": "#eae7e9", "on-surface": "#1b1b1d",
+                        "secondary-fixed-dim": "#bcc7de", "emerald-accent": "#10B981"
+                    },
+                    "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                    "spacing": { "stack-sm": "8px", "stack-lg": "32px", "stack-md": "16px", "margin-mobile": "16px", "gutter": "24px", "container-max": "1200px", "sidebar-width": "280px" },
+                    "fontFamily": { "body-md": ["Inter"], "h3": ["Poppins"], "h1-mobile": ["Poppins"], "code-data": ["IBM Plex Sans"], "h2": ["Poppins"], "display": ["Poppins"], "label-caps": ["Inter"], "body-lg": ["Inter"], "h1": ["Poppins"] },
+                    "fontSize": { "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }], "h3": ["18px", { "lineHeight": "1.4", "fontWeight": "600" }], "h1-mobile": ["24px", { "lineHeight": "1.2", "fontWeight": "600" }], "code-data": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }], "h2": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }], "display": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }], "h1": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }] }
+                },
+            },
+        }
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;600&family=IBM+Plex+Sans:wght@400;500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:wght@100..900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../css/styles.css" />
+</head>
+
+<body class="bg-surface text-on-surface font-body-md selection:bg-secondary-container">
+    <nav class="bg-surface dark:bg-inverse-surface shadow-sm docked full-width top-0 sticky z-50 h-16">
+        <div id="header-inner"></div>
+    </nav>
+    <div class="flex min-h-screen">
+        <aside
+            class="fixed left-0 top-16 h-[calc(100vh-64px)] w-sidebar-width bg-surface-container-low dark:bg-surface-container-lowest hidden lg:flex flex-col gap-stack-sm p-stack-md border-r border-outline-variant overflow-y-auto hide-scrollbar">
+            <div id="sidebar-inner"></div>
+        </aside>
+        <main class="flex-1 lg:ml-sidebar-width p-gutter bg-surface">
+            <div class="max-w-container-max mx-auto">
+                <header class="mb-stack-lg flex flex-col md:flex-row md:items-end justify-between gap-4">
+                    <div>
+                        <span class="text-label-caps font-label-caps text-secondary tracking-widest block mb-2">PRACTICAL IMPLEMENTATIONS</span>
+                        <h1 class="font-h1 text-h1 text-primary">Real-World Applications</h1>
+                        <p class="text-body-lg font-body-lg text-secondary max-w-2xl mt-2">Deploying Marathi NLP in high-stakes legal and financial environments requires rigorous precision and linguistic depth.</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <button class="px-6 py-2 border border-outline rounded-full flex items-center gap-2 hover:bg-surface-container-high transition-all">
+                            <span class="material-symbols-outlined">share</span> Share
+                        </button>
+                        <button class="px-6 py-2 bg-[#10B981] text-white rounded-full flex items-center gap-2 hover:opacity-90 transition-all shadow-sm">
+                            <span class="material-symbols-outlined">picture_as_pdf</span> Download Case Studies
+                        </button>
+                    </div>
+                </header>
+                <div class="bento-grid">
+                    <div class="col-span-12 md:col-span-7 lg:col-span-8 glass-card p-stack-lg rounded-xl shadow-profile relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+                            <span class="material-symbols-outlined text-[120px]">gavel</span>
+                        </div>
+                        <div class="flex items-center gap-4 mb-stack-md">
+                            <div class="w-12 h-12 rounded-lg bg-primary flex items-center justify-center text-white">
+                                <span class="material-symbols-outlined">category</span>
+                            </div>
+                            <h3 class="font-h2 text-h2">Legal Document Classification</h3>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-stack-lg">
+                            <div>
+                                <h4 class="text-label-caps font-label-caps text-secondary mb-2">PROBLEM STATEMENT</h4>
+                                <p class="text-body-md font-body-md text-on-surface">State judiciaries in Maharashtra struggle with manual categorization of over 500,000+ yearly case filings across 48+ court sub-divisions.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-label-caps font-label-caps text-secondary mb-2">NLP CONCEPTS USED</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-surface-container px-3 py-1 rounded text-code-data font-code-data">Hierarchical BERT</span>
+                                    <span class="bg-surface-container px-3 py-1 rounded text-code-data font-code-data">TF-IDF Vectorization</span>
+                                    <span class="bg-surface-container px-3 py-1 rounded text-code-data font-code-data">Lemmatization</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-stack-lg p-stack-md bg-surface-container-low rounded-lg border border-outline-variant">
+                            <div class="flex justify-between">
+                                <div>
+                                    <h4 class="text-label-caps font-label-caps text-secondary mb-1">BENEFITS</h4>
+                                    <p class="text-body-md">94% classification accuracy; 70% reduction in administrative overhead.</p>
+                                </div>
+                                <div class="text-right">
+                                    <h4 class="text-label-caps font-label-caps text-secondary mb-1">EXPECTED OUTCOMES</h4>
+                                    <p class="font-bold text-primary">Automated Docketing System</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-12 md:col-span-5 lg:col-span-4 bg-primary-container text-white p-stack-lg rounded-xl shadow-profile flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-full bg-[#10B981] flex items-center justify-center text-white mb-stack-md">
+                                <span class="material-symbols-outlined">receipt_long</span>
+                            </div>
+                            <h3 class="font-h3 text-h3 mb-stack-sm text-white">Tax Document Processing</h3>
+                            <p class="font-body-md text-white/80">Extraction of key financial metrics from Marathi tax returns and regional audit reports.</p>
+                        </div>
+                        <div class="mt-stack-lg">
+                            <ul class="space-y-3">
+                                <li class="flex items-center gap-2 text-white/90">
+                                    <span class="material-symbols-outlined text-[18px]">check_circle</span> Named Entity Recognition (NER)
+                                </li>
+                                <li class="flex items-center gap-2 text-white/90">
+                                    <span class="material-symbols-outlined text-[18px]">check_circle</span> Optical Character Recognition (OCR)
+                                </li>
+                            </ul>
+                            <div class="mt-6 pt-4 border-t border-white/20">
+                                <span class="text-label-caps text-white/60">ROI EXPECTED</span>
+                                <p class="text-h2 font-bold text-[#10B981]">4.5x Speedup</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-12 md:col-span-6 glass-card p-stack-lg rounded-xl shadow-profile hover:border-primary/10 transition-all">
+                        <div class="flex items-start justify-between mb-stack-md">
+                            <div class="p-3 bg-secondary-container text-primary rounded-xl">
+                                <span class="material-symbols-outlined">manage_search</span>
+                            </div>
+                            <span class="bg-secondary text-white text-[10px] px-2 py-1 rounded-full uppercase tracking-tighter">Information Retrieval</span>
+                        </div>
+                        <h3 class="font-h3 text-h3 mb-2">Marathi Legal Search Engine</h3>
+                        <p class="text-body-md text-secondary mb-stack-lg">Providing lawyers with semantic search capabilities across decades of Marathi High Court judgments.</p>
+                        <div class="space-y-4">
+                            <div class="border-l-2 border-primary pl-4">
+                                <p class="text-label-caps text-secondary uppercase">The Challenge</p>
+                                <p class="text-body-md italic text-on-surface-variant">"Standard keyword search fails to capture complex Marathi legal terminology and archaic phrasing."</p>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4 pt-2">
+                                <div class="bg-surface p-3 rounded border border-outline-variant">
+                                    <p class="text-label-caps text-secondary">CONCEPTS</p>
+                                    <p class="text-code-data font-medium">Cross-Lingual Embedding</p>
+                                </div>
+                                <div class="bg-surface p-3 rounded border border-outline-variant">
+                                    <p class="text-label-caps text-secondary">OUTCOME</p>
+                                    <p class="text-code-data font-medium">Relevant Case Precedent</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-12 md:col-span-6 glass-card p-stack-lg rounded-xl shadow-profile relative">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="material-symbols-outlined text-primary">description</span>
+                            <h3 class="font-h3 text-h3">Contract Analysis</h3>
+                        </div>
+                        <p class="text-body-md text-on-surface mb-6">Automated identification of liability clauses and termination periods in regional Marathi business contracts.</p>
+                        <div class="space-y-6">
+                            <div class="flex gap-4">
+                                <div class="w-1 bg-[#10B981] rounded-full"></div>
+                                <div>
+                                    <p class="font-bold text-body-md">Pattern Matching & Dependency Parsing</p>
+                                    <p class="text-label-caps text-secondary">Used for identifying linguistic relationships between parties.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="w-1 bg-[#10B981] rounded-full"></div>
+                                <div>
+                                    <p class="font-bold text-body-md">Risk Mitigation</p>
+                                    <p class="text-label-caps text-secondary">Reduces human error in contract review by 40%.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-8 flex justify-end">
+                            <button class="text-primary font-bold flex items-center gap-1 hover:underline">
+                                Explore Workflow <span class="material-symbols-outlined">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-span-12 glass-card rounded-xl overflow-hidden shadow-profile flex flex-col md:flex-row">
+                        <div class="md:w-1/3 bg-surface-container-high p-stack-lg flex flex-col justify-center items-center text-center">
+                            <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-sm mb-4">
+                                <span class="material-symbols-outlined text-4xl text-primary">account_balance</span>
+                            </div>
+                            <h3 class="font-h2 text-h2 mb-2">Banking Chatbots</h3>
+                            <p class="text-label-caps text-secondary">Conversational AI</p>
+                        </div>
+                        <div class="md:w-2/3 p-stack-lg grid grid-cols-1 md:grid-cols-2 gap-gutter">
+                            <div>
+                                <h4 class="font-bold mb-2">Problem Statement</h4>
+                                <p class="text-body-md text-on-surface-variant">Rural banking customers struggle with English-only digital banking interfaces, leading to exclusion from digital services.</p>
+                                <div class="mt-4">
+                                    <h4 class="font-bold mb-2">NLP Concepts Used</h4>
+                                    <ul class="text-code-data text-secondary list-disc pl-5 space-y-1">
+                                        <li>Intent Recognition (Marathi Dialects)</li>
+                                        <li>Entity Extraction (Amount, Account)</li>
+                                        <li>NLU for Low-Resource Languages</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="bg-surface-container-low p-stack-md rounded-lg">
+                                <h4 class="font-bold mb-4">Outcome Matrix</h4>
+                                <div class="space-y-4">
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-body-md">Customer Retention</span>
+                                        <span class="bg-[#10B981] text-white text-[10px] px-2 py-0.5 rounded">+22%</span>
+                                    </div>
+                                    <div class="w-full bg-surface-variant rounded-full h-1.5">
+                                        <div class="bg-primary h-1.5 rounded-full" style="width: 85%"></div>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-body-md">Support Cost</span>
+                                        <span class="bg-error text-white text-[10px] px-2 py-0.5 rounded">-35%</span>
+                                    </div>
+                                    <div class="w-full bg-surface-variant rounded-full h-1.5">
+                                        <div class="bg-primary h-1.5 rounded-full" style="width: 65%"></div>
+                                    </div>
+                                </div>
+                                <button class="w-full mt-6 py-2 bg-primary text-white rounded text-label-caps uppercase tracking-widest font-bold hover:scale-[1.02] transition-transform">View Demo Script</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-stack-lg"></div>
+            </div>
+        </main>
+    </div>
+    <footer class="bg-surface-container dark:bg-inverse-surface w-full py-stack-lg mt-auto lg:ml-sidebar-width"><div id="footer-inner"></div></footer>
+    <script>
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-4px)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+    <script>window.__activePage = 'applications'; window.__basePath = '..';</script>
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/header.js"></script>
+    <script src="../js/footer.js"></script>
+    <script src="../js/search.js"></script>
+</body>
+
+</html>

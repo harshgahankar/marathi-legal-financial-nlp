@@ -1,0 +1,496 @@
+<!-- Workflows - Marathi NLP Portal -->
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Workflow Diagrams | Marathi NLP Portal</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#ffffff", "error": "#ba1a1a", "primary-fixed": "#dae2fd",
+                        "on-secondary-fixed": "#111c2d", "tertiary": "#10B981", "secondary": "#545f73",
+                        "secondary-container": "#d5e0f8", "outline": "#76777d", "surface-container-lowest": "#ffffff",
+                        "surface-container": "#f0edef", "on-primary": "#ffffff", "outline-variant": "#c6c6cd",
+                        "on-tertiary-fixed": "#271901", "on-primary-fixed": "#131b2e", "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#574425", "tertiary-container": "#271901",
+                        "secondary-fixed": "#d8e3fb", "surface-container-highest": "#e4e2e4",
+                        "inverse-primary": "#bec6e0", "surface-bright": "#fcf8fa", "tertiary-fixed-dim": "#dec29a",
+                        "primary-fixed-dim": "#bec6e0", "error-container": "#ffdad6", "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#f3f0f2", "on-tertiary-container": "#98805d",
+                        "on-secondary-container": "#586377", "surface-dim": "#dcd9db", "on-background": "#1b1b1d",
+                        "primary": "#0F172A", "surface-tint": "#565e74", "background": "#fcf8fa",
+                        "surface-variant": "#e4e2e4", "on-primary-container": "#7c839b",
+                        "surface-container-low": "#f6f3f5", "primary-container": "#131b2e",
+                        "inverse-surface": "#303032", "on-secondary-fixed-variant": "#3c475a",
+                        "on-error-container": "#93000a", "on-primary-fixed-variant": "#3f465c",
+                        "surface": "#fcf8fa", "on-surface-variant": "#45464d", "tertiary-fixed": "#fcdeb5",
+                        "surface-container-high": "#eae7e9", "on-surface": "#1b1b1d",
+                        "secondary-fixed-dim": "#bcc7de", "emerald-accent": "#10B981"
+                    },
+                    "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                    "spacing": { "stack-sm": "8px", "stack-lg": "32px", "stack-md": "16px", "margin-mobile": "16px", "gutter": "24px", "container-max": "1200px", "sidebar-width": "280px" },
+                    "fontFamily": { "body-md": ["Inter"], "h3": ["Poppins"], "h1-mobile": ["Poppins"], "code-data": ["IBM Plex Sans"], "h2": ["Poppins"], "display": ["Poppins"], "label-caps": ["Inter"], "body-lg": ["Inter"], "h1": ["Poppins"] },
+                    "fontSize": { "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }], "h3": ["18px", { "lineHeight": "1.4", "fontWeight": "600" }], "h1-mobile": ["24px", { "lineHeight": "1.2", "fontWeight": "600" }], "code-data": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }], "h2": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }], "display": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }], "h1": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }] }
+                },
+            },
+        }
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:wght@100..900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../css/styles.css" />
+</head>
+
+<body
+    class="bg-background text-on-background font-body-md selection:bg-tertiary-fixed selection:text-on-tertiary-fixed">
+    <nav class="bg-surface dark:bg-inverse-surface shadow-sm docked full-width top-0 sticky z-50 h-16">
+        <div id="header-inner"></div>
+    </nav>
+    <div class="flex min-h-screen max-w-[1920px] mx-auto">
+        <aside
+            class="hidden lg:flex flex-col gap-stack-sm p-stack-md border-r border-outline-variant bg-surface-container-low w-sidebar-width fixed left-0 top-16 h-[calc(100vh-64px)] overflow-y-auto hide-scrollbar">
+            <div id="sidebar-inner"></div>
+        </aside>
+        <main class="flex-1 lg:ml-sidebar-width p-gutter overflow-x-hidden">
+            <div class="max-w-container-max mx-auto space-y-stack-lg">
+                <section class="space-y-stack-sm">
+                    <h1 class="font-h1 text-h1 text-primary">NLP Workflow Architectures</h1>
+                    <p class="text-body-lg text-secondary max-w-3xl">
+                        Explore the systematic pipelines designed for Marathi linguistic analysis. These interactive
+                        diagrams illustrate the data flow from raw Devanagari text to high-dimensional feature vectors.
+                    </p>
+                </section>
+                <section
+                    class="bg-surface-container-lowest rounded-xl shadow-md border border-outline-variant overflow-hidden">
+                    <div
+                        class="p-stack-md border-b border-outline-variant flex justify-between items-center bg-surface-bright">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-tertiary">cleaning_services</span>
+                            <h2 class="font-h2 text-h2">1. Complete Text Preprocessing Pipeline</h2>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span id="p1-step-counter" class="text-label-caps text-secondary bg-surface-container-high px-2 py-1 rounded">Step 1 of 8</span>
+                            <span class="text-label-caps text-secondary bg-surface-container-high px-2 py-1 rounded">Stage: Preprocessing</span>
+                        </div>
+                    </div>
+                    <div class="px-gutter pt-6 pb-2">
+                        <div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden">
+                            <div id="p1-progress-bar" class="h-full bg-tertiary rounded-full transition-all duration-700 ease-in-out" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    <div class="px-gutter pb-2 overflow-x-auto workflow-scroll">
+                        <div class="flex items-center min-w-[900px] py-4" id="p1-steps"></div>
+                    </div>
+                    <div class="mx-gutter mb-4 rounded-xl border border-outline-variant bg-surface-container-low overflow-hidden transition-all duration-500" id="p1-detail">
+                        <div class="p-5">
+                            <div class="flex items-start gap-4">
+                                <div id="p1-detail-icon" class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary flex-shrink-0">
+                                    <span class="material-symbols-outlined">info</span>
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <div class="flex items-center gap-3 mb-2">
+                                        <h3 id="p1-detail-title" class="font-h3 text-h3 text-primary">Step Title</h3>
+                                        <span id="p1-detail-badge" class="px-2 py-0.5 bg-primary/10 text-primary rounded text-xs font-label-caps">Active</span>
+                                    </div>
+                                    <div class="grid md:grid-cols-2 gap-4 mt-3">
+                                        <div>
+                                            <span class="font-label-caps text-label-caps text-outline uppercase text-xs">Definition</span>
+                                            <p id="p1-detail-def" class="text-body-md text-on-surface mt-0.5">...</p>
+                                        </div>
+                                        <div>
+                                            <span class="font-label-caps text-label-caps text-outline uppercase text-xs">Working Principle</span>
+                                            <p id="p1-detail-wp" class="text-body-md text-on-surface mt-0.5">...</p>
+                                        </div>
+                                    </div>
+                                    <div class="mt-3 p-3 bg-surface-container-lowest rounded-lg border-l-4 border-tertiary">
+                                        <span class="font-label-caps text-label-caps text-secondary uppercase text-xs">Marathi Example</span>
+                                        <p id="p1-detail-example" class="font-code-data text-code-data italic mt-0.5">...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-center gap-4 px-gutter pb-5">
+                        <button id="p1-btn-prev" class="flex items-center gap-1.5 px-4 py-2 rounded-lg border border-outline-variant text-secondary hover:bg-surface-container-high transition-all text-sm font-medium disabled:opacity-30 disabled:cursor-not-allowed">
+                            <span class="material-symbols-outlined text-sm">chevron_left</span> Previous
+                        </button>
+                        <button id="p1-btn-play" class="flex items-center gap-1.5 px-5 py-2 rounded-lg bg-primary text-on-primary hover:opacity-90 transition-all text-sm font-medium shadow-sm">
+                            <span class="material-symbols-outlined text-sm" id="p1-play-icon">play_arrow</span>
+                            <span id="p1-play-label">Auto-Play</span>
+                        </button>
+                        <button id="p1-btn-next" class="flex items-center gap-1.5 px-4 py-2 rounded-lg border border-outline-variant text-secondary hover:bg-surface-container-high transition-all text-sm font-medium">
+                            Next <span class="material-symbols-outlined text-sm">chevron_right</span>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- ===== 2. Feature Engineering Pipeline ===== -->
+                <section
+                    class="bg-surface-container-lowest rounded-xl shadow-md border border-outline-variant overflow-hidden">
+                    <div
+                        class="p-stack-md border-b border-outline-variant flex justify-between items-center bg-surface-bright">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-tertiary">architecture</span>
+                            <h2 class="font-h2 text-h2">2. Feature Engineering Pipeline</h2>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span id="p2-step-counter" class="text-label-caps text-secondary bg-surface-container-high px-2 py-1 rounded">Step 1 of 7</span>
+                            <span class="text-label-caps text-secondary bg-surface-container-high px-2 py-1 rounded">Stage: Feature Extraction</span>
+                        </div>
+                    </div>
+                    <div class="px-gutter pt-6 pb-2">
+                        <div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden">
+                            <div id="p2-progress-bar" class="h-full bg-tertiary rounded-full transition-all duration-700 ease-in-out" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    <div class="px-gutter pb-2 overflow-x-auto workflow-scroll">
+                        <div class="flex items-center min-w-[800px] py-4" id="p2-steps"></div>
+                    </div>
+                    <div class="mx-gutter mb-4 rounded-xl border border-outline-variant bg-surface-container-low overflow-hidden transition-all duration-500" id="p2-detail">
+                        <div class="p-5">
+                            <div class="flex items-start gap-4">
+                                <div id="p2-detail-icon" class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary flex-shrink-0">
+                                    <span class="material-symbols-outlined">info</span>
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <div class="flex items-center gap-3 mb-2">
+                                        <h3 id="p2-detail-title" class="font-h3 text-h3 text-primary">Step Title</h3>
+                                        <span id="p2-detail-badge" class="px-2 py-0.5 bg-primary/10 text-primary rounded text-xs font-label-caps">Active</span>
+                                    </div>
+                                    <div class="grid md:grid-cols-2 gap-4 mt-3">
+                                        <div>
+                                            <span class="font-label-caps text-label-caps text-outline uppercase text-xs">Definition</span>
+                                            <p id="p2-detail-def" class="text-body-md text-on-surface mt-0.5">...</p>
+                                        </div>
+                                        <div>
+                                            <span class="font-label-caps text-label-caps text-outline uppercase text-xs">Working Principle</span>
+                                            <p id="p2-detail-wp" class="text-body-md text-on-surface mt-0.5">...</p>
+                                        </div>
+                                    </div>
+                                    <div class="mt-3 p-3 bg-surface-container-lowest rounded-lg border-l-4 border-tertiary">
+                                        <span class="font-label-caps text-label-caps text-secondary uppercase text-xs">Marathi Example</span>
+                                        <p id="p2-detail-example" class="font-code-data text-code-data italic mt-0.5">...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-center gap-4 px-gutter pb-5">
+                        <button id="p2-btn-prev" class="flex items-center gap-1.5 px-4 py-2 rounded-lg border border-outline-variant text-secondary hover:bg-surface-container-high transition-all text-sm font-medium disabled:opacity-30 disabled:cursor-not-allowed">
+                            <span class="material-symbols-outlined text-sm">chevron_left</span> Previous
+                        </button>
+                        <button id="p2-btn-play" class="flex items-center gap-1.5 px-5 py-2 rounded-lg bg-primary text-on-primary hover:opacity-90 transition-all text-sm font-medium shadow-sm">
+                            <span class="material-symbols-outlined text-sm" id="p2-play-icon">play_arrow</span>
+                            <span id="p2-play-label">Auto-Play</span>
+                        </button>
+                        <button id="p2-btn-next" class="flex items-center gap-1.5 px-4 py-2 rounded-lg border border-outline-variant text-secondary hover:bg-surface-container-high transition-all text-sm font-medium">
+                            Next <span class="material-symbols-outlined text-sm">chevron_right</span>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- ===== 3. Text-to-Vector Transformation Pipeline ===== -->
+                <section
+                    class="bg-surface-container-lowest rounded-xl shadow-md border border-outline-variant overflow-hidden">
+                    <div
+                        class="p-stack-md border-b border-outline-variant flex justify-between items-center bg-surface-bright">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-tertiary">calculate</span>
+                            <h2 class="font-h2 text-h2">3. Text-to-Vector Transformation Pipeline</h2>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span id="p3-step-counter" class="text-label-caps text-secondary bg-surface-container-high px-2 py-1 rounded">Step 1 of 6</span>
+                            <span class="text-label-caps text-secondary bg-surface-container-high px-2 py-1 rounded">Stage: Embedding</span>
+                        </div>
+                    </div>
+                    <div class="px-gutter pt-6 pb-2">
+                        <div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden">
+                            <div id="p3-progress-bar" class="h-full bg-tertiary rounded-full transition-all duration-700 ease-in-out" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    <div class="px-gutter pb-2 overflow-x-auto workflow-scroll">
+                        <div class="flex items-center min-w-[700px] py-4" id="p3-steps"></div>
+                    </div>
+                    <div class="mx-gutter mb-4 rounded-xl border border-outline-variant bg-surface-container-low overflow-hidden transition-all duration-500" id="p3-detail">
+                        <div class="p-5">
+                            <div class="flex items-start gap-4">
+                                <div id="p3-detail-icon" class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary flex-shrink-0">
+                                    <span class="material-symbols-outlined">info</span>
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <div class="flex items-center gap-3 mb-2">
+                                        <h3 id="p3-detail-title" class="font-h3 text-h3 text-primary">Step Title</h3>
+                                        <span id="p3-detail-badge" class="px-2 py-0.5 bg-primary/10 text-primary rounded text-xs font-label-caps">Active</span>
+                                    </div>
+                                    <div class="grid md:grid-cols-2 gap-4 mt-3">
+                                        <div>
+                                            <span class="font-label-caps text-label-caps text-outline uppercase text-xs">Definition</span>
+                                            <p id="p3-detail-def" class="text-body-md text-on-surface mt-0.5">...</p>
+                                        </div>
+                                        <div>
+                                            <span class="font-label-caps text-label-caps text-outline uppercase text-xs">Working Principle</span>
+                                            <p id="p3-detail-wp" class="text-body-md text-on-surface mt-0.5">...</p>
+                                        </div>
+                                    </div>
+                                    <div class="mt-3 p-3 bg-surface-container-lowest rounded-lg border-l-4 border-tertiary">
+                                        <span class="font-label-caps text-label-caps text-secondary uppercase text-xs">Marathi Example</span>
+                                        <p id="p3-detail-example" class="font-code-data text-code-data italic mt-0.5">...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-center gap-4 px-gutter pb-5">
+                        <button id="p3-btn-prev" class="flex items-center gap-1.5 px-4 py-2 rounded-lg border border-outline-variant text-secondary hover:bg-surface-container-high transition-all text-sm font-medium disabled:opacity-30 disabled:cursor-not-allowed">
+                            <span class="material-symbols-outlined text-sm">chevron_left</span> Previous
+                        </button>
+                        <button id="p3-btn-play" class="flex items-center gap-1.5 px-5 py-2 rounded-lg bg-primary text-on-primary hover:opacity-90 transition-all text-sm font-medium shadow-sm">
+                            <span class="material-symbols-outlined text-sm" id="p3-play-icon">play_arrow</span>
+                            <span id="p3-play-label">Auto-Play</span>
+                        </button>
+                        <button id="p3-btn-next" class="flex items-center gap-1.5 px-4 py-2 rounded-lg border border-outline-variant text-secondary hover:bg-surface-container-high transition-all text-sm font-medium">
+                            Next <span class="material-symbols-outlined text-sm">chevron_right</span>
+                        </button>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <footer class="bg-surface-container dark:bg-inverse-surface w-full py-stack-lg mt-auto lg:ml-sidebar-width"><div id="footer-inner"></div></footer>
+    <script>
+        // ===== Interactive Pipeline Controller =====
+        class PipelineController {
+            constructor(prefix, steps) {
+                this.prefix = prefix;
+                this.steps = steps;
+                this.currentStep = 0;
+                this.isPlaying = false;
+                this.playInterval = null;
+                this.PLAY_DELAY = 2800;
+                this.init();
+            }
+            get el() {
+                const p = this.prefix;
+                return {
+                    steps: document.getElementById(p + '-steps'),
+                    progress: document.getElementById(p + '-progress-bar'),
+                    counter: document.getElementById(p + '-step-counter'),
+                    icon: document.getElementById(p + '-detail-icon'),
+                    title: document.getElementById(p + '-detail-title'),
+                    badge: document.getElementById(p + '-detail-badge'),
+                    def: document.getElementById(p + '-detail-def'),
+                    wp: document.getElementById(p + '-detail-wp'),
+                    example: document.getElementById(p + '-detail-example'),
+                    btnPrev: document.getElementById(p + '-btn-prev'),
+                    btnNext: document.getElementById(p + '-btn-next'),
+                    btnPlay: document.getElementById(p + '-btn-play'),
+                    playIcon: document.getElementById(p + '-play-icon'),
+                    playLabel: document.getElementById(p + '-play-label')
+                };
+            }
+            init() {
+                this.render();
+                this.el.btnPrev.addEventListener('click', () => this.prev());
+                this.el.btnNext.addEventListener('click', () => this.next());
+                this.el.btnPlay.addEventListener('click', () => this.togglePlay());
+            }
+            render() {
+                const e = this.el;
+                let html = '';
+                this.steps.forEach((s, i) => {
+                    const active = i === this.currentStep;
+                    const done = i < this.currentStep;
+                    const circle = done ? 'bg-tertiary text-on-tertiary' : active ? 'bg-primary text-on-primary ring-4 ring-primary/20' : 'bg-surface-container-high text-secondary';
+                    const border = done ? 'border-tertiary' : active ? 'border-primary' : 'border-outline-variant';
+                    if (i > 0) {
+                        const line = done ? 'bg-tertiary' : active ? 'bg-primary' : 'bg-outline-variant';
+                        html += '<div class="w-8 h-0.5 ' + line + ' transition-all duration-700"></div>';
+                    }
+                    html += '<div class="flex-shrink-0 cursor-pointer group text-center" onclick="pipelines[\'' + this.prefix + '\'].goTo(' + i + ')">';
+                    html += '<div class="w-14 h-14 rounded-full flex items-center justify-center transition-all duration-500 ' + circle + ' ' + border + ' border-2 shadow-sm group-hover:shadow-md">';
+                    html += done ? '<span class="material-symbols-outlined text-sm">check</span>' : '<span class="material-symbols-outlined text-sm">' + s.icon + '</span>';
+                    html += '</div>';
+                    html += '<p class="text-xs font-medium mt-1.5 whitespace-nowrap ' + (active ? 'text-primary font-bold' : 'text-secondary') + '">' + s.label + '</p>';
+                    html += '<p class="text-[10px] text-secondary/60 whitespace-nowrap">' + s.sub + '</p>';
+                    html += '</div>';
+                });
+                e.steps.innerHTML = html;
+                this.updateDetail();
+                this.updateCounter();
+                this.updateProgress();
+            }
+            updateDetail() {
+                const s = this.steps[this.currentStep];
+                const e = this.el;
+                e.title.textContent = s.label;
+                e.def.textContent = s.def;
+                e.wp.textContent = s.wp;
+                e.example.textContent = s.example;
+                e.icon.innerHTML = '<span class="material-symbols-outlined">' + s.icon + '</span>';
+                e.icon.className = 'w-12 h-12 rounded-full flex items-center justify-center text-on-primary flex-shrink-0 ' + (this.currentStep % 2 === 1 ? 'bg-tertiary' : 'bg-primary');
+                e.badge.textContent = 'Step ' + (this.currentStep + 1) + ' of ' + this.steps.length;
+            }
+            updateCounter() {
+                this.el.counter.textContent = 'Step ' + (this.currentStep + 1) + ' of ' + this.steps.length;
+            }
+            updateProgress() {
+                this.el.progress.style.width = ((this.currentStep) / (this.steps.length - 1)) * 100 + '%';
+            }
+            goTo(i) {
+                if (i < 0 || i >= this.steps.length) return;
+                this.currentStep = i;
+                this.render();
+            }
+            next() {
+                if (this.currentStep < this.steps.length - 1) {
+                    this.goTo(this.currentStep + 1);
+                } else if (this.isPlaying) {
+                    this.stop();
+                }
+            }
+            prev() {
+                if (this.currentStep > 0) this.goTo(this.currentStep - 1);
+            }
+            togglePlay() {
+                this.isPlaying ? this.stop() : this.start();
+            }
+            start() {
+                if (this.currentStep >= this.steps.length - 1) this.goTo(0);
+                this.isPlaying = true;
+                this.el.playIcon.textContent = 'pause';
+                this.el.playLabel.textContent = 'Pause';
+                this.playInterval = setInterval(() => this.next(), this.PLAY_DELAY);
+            }
+            stop() {
+                this.isPlaying = false;
+                this.el.playIcon.textContent = 'play_arrow';
+                this.el.playLabel.textContent = 'Auto-Play';
+                if (this.playInterval) { clearInterval(this.playInterval); this.playInterval = null; }
+            }
+        }
+
+        // ===== Pipeline 1: Preprocessing =====
+        const p1Steps = [
+            { id:'raw', icon:'description', label:'Raw Text Input', sub:'Devanagari Corpus',
+              def:'Raw Marathi text in Devanagari script, from legal documents, financial reports, or web corpora.',
+              wp:'The input text is read as-is with its original Unicode encoding. No transformations are applied at this stage.',
+              example:'"महाराष्ट्र शासनाचे शैक्षणिक धोरण २०२४ मध्ये लागू करण्यात आले आहे."' },
+            { id:'seg', icon:'text_snippet', label:'Sentence Segmentation', sub:'Boundary Detection',
+              def:'Divides text into individual sentences based on punctuation (। danda, ?, !) and grammatical cues.',
+              wp:'Rule-based patterns for punctuation plus statistical models for ambiguous cases like abbreviations and quoted speech.',
+              example:'"मी शाळेत जातो. तो घरी राहतो." → ["मी शाळेत जातो.", "तो घरी राहतो."]' },
+            { id:'tok', icon:'token', label:'Tokenization', sub:'Word Splitting',
+              def:'Splits sentences into discrete tokens — words, subwords, or characters — for vocabulary mapping.',
+              wp:'Whitespace splitting, punctuation handling, and subword algorithms (BPE/SentencePiece) trained on Marathi corpora.',
+              example:'"मराठी भाषा समृद्ध आहे." → ["मराठी", "भाषा", "समृद्ध", "आहे", "."]' },
+            { id:'stop', icon:'block', label:'Stop-word Removal', sub:'Noise Filtering',
+              def:'Filters out high-frequency function words (postpositions, conjunctions, auxiliary verbs).',
+              wp:'A curated Marathi stop-word list is matched against tokens; matches discarded unless required by the task.',
+              example:'"मी आणि तो शाळेत गेलो." → ["शाळेत", "गेलो"] (removed: मी, आणि, तो)' },
+            { id:'stem', icon:'dictionary', label:'Stemming & Lemmatization', sub:'Morphological Reduction',
+              def:'Reduces inflected words to base form via heuristic suffix stripping or dictionary-aware analysis.',
+              wp:'Stemming: fixed suffix patterns (-णे, -तो). Lemmatization: Marathi morphological analyzer with POS tags.',
+              example:'Stem: "खेळणे, खेळतो" → "खेळ" | Lemma: "गेलो, गेली" → "जा"' },
+            { id:'noise', icon:'cleaning_services', label:'Noise Removal', sub:'Artifact Stripping',
+              def:'Removes HTML tags, URLs, emojis, special characters, and non-Devanagari script.',
+              wp:'Regex patterns, Unicode range filtering (Devanagari U+0900–U+097F), and language detection.',
+              example:'"Check <b>हा</b> article @url 😊" → "हा article"' },
+            { id:'clean', icon:'format_align_left', label:'Text Cleaning', sub:'Normalization',
+              def:'Spelling correction, numeral standardization (०-९ ↔ 0-9), ligature normalization, NFC.',
+              wp:'Spelling dictionaries, Devanagari numeral mapping, ZWJ handling, whitespace regularization.',
+              example:'"१९९८" → "1998" | "क्र\\u200dम" (ZWJ) → "क्रम"' },
+            { id:'out', icon:'check_circle', label:'Clean Output', sub:'Ready for Analysis',
+              def:'Final preprocessed text — normalized, segmented, tokenized, cleaned — ready for feature extraction.',
+              wp:'Structured list of clean Marathi tokens/sentences with consistent encoding.',
+              example:'["महाराष्ट्र", "शासन", "शैक्षणिक", "धोरण", "२०२४", "मध्ये", "लागू"]' }
+        ];
+
+        // ===== Pipeline 2: Feature Engineering =====
+        const p2Steps = [
+            { id:'in', icon:'token', label:'Clean Tokens', sub:'From Preprocessing',
+              def:'Preprocessed Marathi tokens — normalized, segmented, and cleaned — ready for numerical transformation.',
+              wp:'The token stream is fed into various vectorization algorithms that map linguistic units to feature spaces.',
+              example:'["महाराष्ट्र", "शासन", "धोरण", "२०२४"]' },
+            { id:'bow', icon:'inventory_2', label:'Bag of Words (BoW)', sub:'Count Vectorization',
+              def:'Models each document as an unordered collection of word counts, creating a sparse frequency matrix.',
+              wp:'Vocabulary built from corpus; each word\'s count per document becomes a feature in a documents × vocabulary matrix.',
+              example:'Doc: "मी शाळेत जातो" → {मी:1, शाळेत:1, जातो:1}' },
+            { id:'ngram', icon:'polyline', label:'N-Grams', sub:'Sequence Patterns',
+              def:'Contiguous sequences of n items preserving local word order, capturing common phrases.',
+              wp:'Sliding window of size n moves across text; each unique n-gram becomes a feature with its frequency.',
+              example:'"मी शाळेत जातो" → Bigrams: ["मी शाळेत", "शाळेत जातो"]' },
+            { id:'tf', icon:'bar_chart', label:'TF (Term Frequency)', sub:'Local Weighting',
+              def:'Measures how frequently a term appears in a document, normalized by document length.',
+              wp:'TF(t,d) = count(t in d) / total terms in d. Log and augmented frequency variants exist.',
+              example:'"मराठी भाषा मराठी संस्कृती" → TF("मराठी") = 2/4 = 0.5' },
+            { id:'idf', icon:'tune', label:'IDF (Inverse Document Frequency)', sub:'Global Rarity',
+              def:'Measures how rare a term is across the entire corpus, down-weighting common terms.',
+              wp:'IDF(t) = log(N / df(t)). Rare terms like "न्यायालय" score higher than common words like "आहे".',
+              example:'"महाराष्ट्र" in 5/100 docs → IDF = log(100/5) = 1.30' },
+            { id:'tfidf', icon:'score', label:'TF-IDF', sub:'Combined Weight',
+              def:'Product of TF and IDF — high weight when a term is frequent in few documents.',
+              wp:'TF-IDF(t,d) = TF(t,d) × log(N/df(t)). Balances local importance with global discriminative power.',
+              example:'"न्यायालय": TF=0.1, IDF=2.0 → TF-IDF=0.20' },
+            { id:'out2', icon:'check_circle', label:'Feature Vector', sub:'Ready for Modeling',
+              def:'Final numerical feature vectors — one per document — ready for ML classifiers.',
+              wp:'Output is a structured matrix of shape documents × features (sparse or dense).',
+              example:'[0.00, 0.50, 0.00, 0.25, 0.20, 0.00, ...]' }
+        ];
+
+        // ===== Pipeline 3: Text-to-Vector =====
+        const p3Steps = [
+            { id:'in3', icon:'token', label:'Clean Tokens', sub:'Preprocessed Input',
+              def:'Sequence of clean, normalized Marathi tokens ready for embedding generation.',
+              wp:'Each token is mapped to an index in a vocabulary. OOV tokens are handled by subword composition.',
+              example:'["महाराष्ट्र", "शासन", "धोरण"]' },
+            { id:'emb', icon:'bubble_chart', label:'Word Embeddings', sub:'Dense Vectors',
+              def:'Dense, low-dimensional vectors where each word maps to a continuous real-valued space.',
+              wp:'Learned by neural networks predicting word co-occurrence; similar words cluster in vector space.',
+              example:'vec("मुंबई") – vec("महाराष्ट्र") + vec("गुजरात") ≈ vec("अहमदाबाद")' },
+            { id:'w2v', icon:'network_intelligence', label:'Word2Vec', sub:'CBOW / Skip-gram',
+              def:'Predictive model learning word vectors from local context windows using CBOW or Skip-gram.',
+              wp:'CBOW predicts target from context; Skip-gram predicts context from target. Negative sampling for efficiency.',
+              example:'Skip-gram: given "मराठी", predict ["प्राचीन", "भाषा", "समृद्ध"]' },
+            { id:'ft', icon:'speed', label:'FastText', sub:'Subword Vectors',
+              def:'Extends Word2Vec — each word is a bag of character n-grams; the word vector is their sum.',
+              wp:'Character n-grams (3–6 chars) each get a vector. Enables embeddings for unseen inflected Marathi words.',
+              example:'"मराठी" → n-grams: "<मर", "मरा", "राठ", "ाठी" ... → summed vector → embedding' },
+            { id:'ctx', icon:'psychology', label:'Contextual Embeddings', sub:'MuRIL / IndicBERT',
+              def:'Dynamic vectors where each word\'s representation depends on its surrounding context via transformers.',
+              wp:'Self-attention processes full sequence; each token attends to all others. Multilingual models pre-trained on Indic languages.',
+              example:'"बँक": "नदीच्या बँकेवर" (river bank) → vector₁ ≠ vector₂ ← "पैसे बँकेत" (money bank)' },
+            { id:'out3', icon:'check_circle', label:'Embedding Tensor', sub:'Final Representation',
+              def:'High-dimensional tensor (sequence length × embedding dimension) for downstream NLP tasks.',
+              wp:'Output is a dense matrix where each token position has a contextual vector (typically 768 or 1024 dimensions).',
+              example:'Tensor shape: [7 tokens × 768 dims] → [[0.12, -0.45, ...], ...]' }
+        ];
+
+        // ===== Instantiate all three =====
+        const pipelines = {};
+        document.addEventListener('DOMContentLoaded', function () {
+            pipelines.p1 = new PipelineController('p1', p1Steps);
+            pipelines.p2 = new PipelineController('p2', p2Steps);
+            pipelines.p3 = new PipelineController('p3', p3Steps);
+            document.addEventListener('keydown', function (e) {
+                if (e.key === ' ') { e.preventDefault(); Object.values(pipelines).forEach(p => p.togglePlay()); }
+            });
+        });
+    </script>
+    <script>window.__activePage = 'workflows'; window.__basePath = '..';</script>
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/header.js"></script>
+    <script src="../js/footer.js"></script>
+    <script src="../js/search.js"></script>
+</body>
+
+</html>
