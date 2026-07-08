@@ -119,9 +119,9 @@
                         <p class="text-secondary">From rule-based systems to the transformer era</p>
                     </div>
                     <div class="relative max-w-4xl mx-auto">
-                        <div class="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-outline-variant"></div>
-                        <div class="space-y-12 relative">
-                            <div class="flex items-center w-full">
+                        <div class="timeline-desktop absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-outline-variant"></div>
+                        <div class="space-y-8 md:space-y-12 relative">
+                            <div class="timeline-desktop flex items-center w-full">
                                 <div class="w-1/2 pr-12 text-right">
                                     <h4 class="font-bold text-primary">2000s: Statistical Era</h4>
                                     <p class="text-sm text-secondary">HMM-based POS taggers and rule-based morphological analyzers for Marathi.</p>
@@ -129,7 +129,14 @@
                                 <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-white shadow"></div>
                                 <div class="w-1/2 pl-12"></div>
                             </div>
-                            <div class="flex items-center w-full">
+                            <div class="timeline-mobile hidden bg-white rounded-xl border border-outline-variant p-4">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <div class="w-3 h-3 bg-primary rounded-full shrink-0"></div>
+                                    <h4 class="font-bold text-primary">2000s: Statistical Era</h4>
+                                </div>
+                                <p class="text-sm text-secondary pl-6">HMM-based POS taggers and rule-based morphological analyzers for Marathi.</p>
+                            </div>
+                            <div class="timeline-desktop flex items-center w-full">
                                 <div class="w-1/2 pr-12"></div>
                                 <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-white shadow"></div>
                                 <div class="w-1/2 pl-12">
@@ -137,7 +144,14 @@
                                     <p class="text-sm text-secondary">Introduction of Word2Vec and FastText trained on Marathi Wikipedia dumps.</p>
                                 </div>
                             </div>
-                            <div class="flex items-center w-full">
+                            <div class="timeline-mobile hidden bg-white rounded-xl border border-outline-variant p-4">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <div class="w-3 h-3 bg-primary rounded-full shrink-0"></div>
+                                    <h4 class="font-bold text-primary">2014: Word Embeddings</h4>
+                                </div>
+                                <p class="text-sm text-secondary pl-6">Introduction of Word2Vec and FastText trained on Marathi Wikipedia dumps.</p>
+                            </div>
+                            <div class="timeline-desktop flex items-center w-full">
                                 <div class="w-1/2 pr-12 text-right">
                                     <h4 class="font-bold text-primary">2018: Deep Learning</h4>
                                     <p class="text-sm text-secondary">RNN and LSTM models revolutionizing Marathi machine translation.</p>
@@ -145,13 +159,27 @@
                                 <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-white shadow"></div>
                                 <div class="w-1/2 pl-12"></div>
                             </div>
-                            <div class="flex items-center w-full">
+                            <div class="timeline-mobile hidden bg-white rounded-xl border border-outline-variant p-4">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <div class="w-3 h-3 bg-primary rounded-full shrink-0"></div>
+                                    <h4 class="font-bold text-primary">2018: Deep Learning</h4>
+                                </div>
+                                <p class="text-sm text-secondary pl-6">RNN and LSTM models revolutionizing Marathi machine translation.</p>
+                            </div>
+                            <div class="timeline-desktop flex items-center w-full">
                                 <div class="w-1/2 pr-12"></div>
                                 <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-on-tertiary-container rounded-full border-4 border-white shadow"></div>
                                 <div class="w-1/2 pl-12">
                                     <h4 class="font-bold text-primary">2021-Present: Transformers</h4>
                                     <p class="text-sm text-secondary">BERT, GPT-3, and Indic-specific LLMs mastering Marathi nuances.</p>
                                 </div>
+                            </div>
+                            <div class="timeline-mobile hidden bg-white rounded-xl border border-outline-variant p-4">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <div class="w-3 h-3 bg-on-tertiary-container rounded-full shrink-0"></div>
+                                    <h4 class="font-bold text-primary">2021-Present: Transformers</h4>
+                                </div>
+                                <p class="text-sm text-secondary pl-6">BERT, GPT-3, and Indic-specific LLMs mastering Marathi nuances.</p>
                             </div>
                         </div>
                     </div>
@@ -232,7 +260,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="w-full md:w-1/3 bg-white rounded-2xl border border-outline-variant p-6 h-fit sticky top-24">
+                        <div class="w-full md:w-1/3 bg-white rounded-2xl border border-outline-variant p-6 h-fit md:sticky md:top-24">
                             <h4 class="font-bold text-primary mb-4 flex items-center gap-2">
                                 <span class="material-symbols-outlined text-primary text-xl">star</span>
                                 Featured Resources

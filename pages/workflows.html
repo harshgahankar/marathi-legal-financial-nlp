@@ -73,10 +73,10 @@
                 <section
                     class="bg-surface-container-lowest rounded-xl shadow-md border border-outline-variant overflow-hidden">
                     <div
-                        class="p-stack-md border-b border-outline-variant flex justify-between items-center bg-surface-bright">
+                        class="p-stack-md border-b border-outline-variant flex flex-col md:flex-row gap-3 md:gap-0 justify-between items-start md:items-center bg-surface-bright">
                         <div class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-tertiary">cleaning_services</span>
-                            <h2 class="font-h2 text-h2">1. Complete Text Preprocessing Pipeline</h2>
+                            <span class="material-symbols-outlined text-tertiary shrink-0">cleaning_services</span>
+                            <h2 class="font-h2 text-h2 text-sm md:text-base lg:text-h2">1. Complete Text Preprocessing Pipeline</h2>
                         </div>
                         <div class="flex items-center gap-3">
                             <span id="p1-step-counter" class="text-label-caps text-secondary bg-surface-container-high px-2 py-1 rounded">Step 1 of 8</span>
@@ -120,16 +120,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex items-center justify-center gap-4 px-gutter pb-5">
-                        <button id="p1-btn-prev" class="flex items-center gap-1.5 px-4 py-2 rounded-lg border border-outline-variant text-secondary hover:bg-surface-container-high transition-all text-sm font-medium disabled:opacity-30 disabled:cursor-not-allowed">
-                            <span class="material-symbols-outlined text-sm">chevron_left</span> Previous
+                    <div class="flex items-center justify-center gap-2 md:gap-4 px-gutter pb-5">
+                        <button id="p1-btn-prev" class="flex items-center gap-1.5 px-3 md:px-4 py-2 rounded-lg border border-outline-variant text-secondary hover:bg-surface-container-high transition-all text-xs md:text-sm font-medium disabled:opacity-30 disabled:cursor-not-allowed">
+                            <span class="material-symbols-outlined text-sm">chevron_left</span> <span class="hidden sm:inline">Previous</span>
                         </button>
-                        <button id="p1-btn-play" class="flex items-center gap-1.5 px-5 py-2 rounded-lg bg-primary text-on-primary hover:opacity-90 transition-all text-sm font-medium shadow-sm">
+                        <button id="p1-btn-play" class="flex items-center gap-1.5 px-3 md:px-5 py-2 rounded-lg bg-primary text-on-primary hover:opacity-90 transition-all text-xs md:text-sm font-medium shadow-sm">
                             <span class="material-symbols-outlined text-sm" id="p1-play-icon">play_arrow</span>
-                            <span id="p1-play-label">Auto-Play</span>
+                            <span id="p1-play-label" class="hidden sm:inline">Auto-Play</span>
                         </button>
-                        <button id="p1-btn-next" class="flex items-center gap-1.5 px-4 py-2 rounded-lg border border-outline-variant text-secondary hover:bg-surface-container-high transition-all text-sm font-medium">
-                            Next <span class="material-symbols-outlined text-sm">chevron_right</span>
+                        <button id="p1-btn-next" class="flex items-center gap-1.5 px-3 md:px-4 py-2 rounded-lg border border-outline-variant text-secondary hover:bg-surface-container-high transition-all text-xs md:text-sm font-medium">
+                            <span class="hidden sm:inline">Next</span> <span class="material-symbols-outlined text-sm">chevron_right</span>
                         </button>
                     </div>
                 </section>
@@ -138,10 +138,10 @@
                 <section
                     class="bg-surface-container-lowest rounded-xl shadow-md border border-outline-variant overflow-hidden">
                     <div
-                        class="p-stack-md border-b border-outline-variant flex justify-between items-center bg-surface-bright">
+                        class="p-stack-md border-b border-outline-variant flex flex-col md:flex-row gap-3 md:gap-0 justify-between items-start md:items-center bg-surface-bright">
                         <div class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-tertiary">architecture</span>
-                            <h2 class="font-h2 text-h2">2. Feature Engineering Pipeline</h2>
+                            <span class="material-symbols-outlined text-tertiary shrink-0">architecture</span>
+                            <h2 class="font-h2 text-h2 text-sm md:text-base lg:text-h2">2. Feature Engineering Pipeline</h2>
                         </div>
                         <div class="flex items-center gap-3">
                             <span id="p2-step-counter" class="text-label-caps text-secondary bg-surface-container-high px-2 py-1 rounded">Step 1 of 7</span>
@@ -185,16 +185,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex items-center justify-center gap-4 px-gutter pb-5">
-                        <button id="p2-btn-prev" class="flex items-center gap-1.5 px-4 py-2 rounded-lg border border-outline-variant text-secondary hover:bg-surface-container-high transition-all text-sm font-medium disabled:opacity-30 disabled:cursor-not-allowed">
-                            <span class="material-symbols-outlined text-sm">chevron_left</span> Previous
+                    <div class="flex items-center justify-center gap-2 md:gap-4 px-gutter pb-5">
+                        <button id="p2-btn-prev" class="flex items-center gap-1.5 px-3 md:px-4 py-2 rounded-lg border border-outline-variant text-secondary hover:bg-surface-container-high transition-all text-xs md:text-sm font-medium disabled:opacity-30 disabled:cursor-not-allowed">
+                            <span class="material-symbols-outlined text-sm">chevron_left</span> <span class="hidden sm:inline">Previous</span>
                         </button>
-                        <button id="p2-btn-play" class="flex items-center gap-1.5 px-5 py-2 rounded-lg bg-primary text-on-primary hover:opacity-90 transition-all text-sm font-medium shadow-sm">
+                        <button id="p2-btn-play" class="flex items-center gap-1.5 px-3 md:px-5 py-2 rounded-lg bg-primary text-on-primary hover:opacity-90 transition-all text-xs md:text-sm font-medium shadow-sm">
                             <span class="material-symbols-outlined text-sm" id="p2-play-icon">play_arrow</span>
-                            <span id="p2-play-label">Auto-Play</span>
+                            <span id="p2-play-label" class="hidden sm:inline">Auto-Play</span>
                         </button>
-                        <button id="p2-btn-next" class="flex items-center gap-1.5 px-4 py-2 rounded-lg border border-outline-variant text-secondary hover:bg-surface-container-high transition-all text-sm font-medium">
-                            Next <span class="material-symbols-outlined text-sm">chevron_right</span>
+                        <button id="p2-btn-next" class="flex items-center gap-1.5 px-3 md:px-4 py-2 rounded-lg border border-outline-variant text-secondary hover:bg-surface-container-high transition-all text-xs md:text-sm font-medium">
+                            <span class="hidden sm:inline">Next</span> <span class="material-symbols-outlined text-sm">chevron_right</span>
                         </button>
                     </div>
                 </section>
@@ -203,10 +203,10 @@
                 <section
                     class="bg-surface-container-lowest rounded-xl shadow-md border border-outline-variant overflow-hidden">
                     <div
-                        class="p-stack-md border-b border-outline-variant flex justify-between items-center bg-surface-bright">
+                        class="p-stack-md border-b border-outline-variant flex flex-col md:flex-row gap-3 md:gap-0 justify-between items-start md:items-center bg-surface-bright">
                         <div class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-tertiary">calculate</span>
-                            <h2 class="font-h2 text-h2">3. Text-to-Vector Transformation Pipeline</h2>
+                            <span class="material-symbols-outlined text-tertiary shrink-0">calculate</span>
+                            <h2 class="font-h2 text-h2 text-sm md:text-base lg:text-h2">3. Text-to-Vector Transformation Pipeline</h2>
                         </div>
                         <div class="flex items-center gap-3">
                             <span id="p3-step-counter" class="text-label-caps text-secondary bg-surface-container-high px-2 py-1 rounded">Step 1 of 6</span>
@@ -250,16 +250,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex items-center justify-center gap-4 px-gutter pb-5">
-                        <button id="p3-btn-prev" class="flex items-center gap-1.5 px-4 py-2 rounded-lg border border-outline-variant text-secondary hover:bg-surface-container-high transition-all text-sm font-medium disabled:opacity-30 disabled:cursor-not-allowed">
-                            <span class="material-symbols-outlined text-sm">chevron_left</span> Previous
+                    <div class="flex items-center justify-center gap-2 md:gap-4 px-gutter pb-5">
+                        <button id="p3-btn-prev" class="flex items-center gap-1.5 px-3 md:px-4 py-2 rounded-lg border border-outline-variant text-secondary hover:bg-surface-container-high transition-all text-xs md:text-sm font-medium disabled:opacity-30 disabled:cursor-not-allowed">
+                            <span class="material-symbols-outlined text-sm">chevron_left</span> <span class="hidden sm:inline">Previous</span>
                         </button>
-                        <button id="p3-btn-play" class="flex items-center gap-1.5 px-5 py-2 rounded-lg bg-primary text-on-primary hover:opacity-90 transition-all text-sm font-medium shadow-sm">
+                        <button id="p3-btn-play" class="flex items-center gap-1.5 px-3 md:px-5 py-2 rounded-lg bg-primary text-on-primary hover:opacity-90 transition-all text-xs md:text-sm font-medium shadow-sm">
                             <span class="material-symbols-outlined text-sm" id="p3-play-icon">play_arrow</span>
-                            <span id="p3-play-label">Auto-Play</span>
+                            <span id="p3-play-label" class="hidden sm:inline">Auto-Play</span>
                         </button>
-                        <button id="p3-btn-next" class="flex items-center gap-1.5 px-4 py-2 rounded-lg border border-outline-variant text-secondary hover:bg-surface-container-high transition-all text-sm font-medium">
-                            Next <span class="material-symbols-outlined text-sm">chevron_right</span>
+                        <button id="p3-btn-next" class="flex items-center gap-1.5 px-3 md:px-4 py-2 rounded-lg border border-outline-variant text-secondary hover:bg-surface-container-high transition-all text-xs md:text-sm font-medium">
+                            <span class="hidden sm:inline">Next</span> <span class="material-symbols-outlined text-sm">chevron_right</span>
                         </button>
                     </div>
                 </section>

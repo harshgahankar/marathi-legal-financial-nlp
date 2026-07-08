@@ -20,7 +20,7 @@
     html += '<span class="absolute right-3 top-1/2 -translate-y-1/2 text-[10px] font-bold text-outline border border-outline-variant px-1 rounded">\u2318K</span>';
     html += '</div>';
     html += '<button id="dark-toggle" class="material-symbols-outlined text-primary dark:text-primary-fixed p-2 hover:bg-surface-variant rounded-full transition-colors">dark_mode</button>';
-    html += '<button class="lg:hidden material-symbols-outlined text-primary">menu</button>';
+    html += '<button id="mobile-menu-btn" class="lg:hidden material-symbols-outlined text-primary">menu</button>';
     html += '</div>';
     html += '</div>';
 
@@ -34,6 +34,52 @@
             isDark = !isDark;
             document.documentElement.classList.toggle('dark');
             toggle.textContent = isDark ? 'light_mode' : 'dark_mode';
+        });
+    }
+
+    var menuBtn = document.getElementById('mobile-menu-btn');
+    var sidebar = document.querySelector('aside');
+    if (menuBtn && sidebar) {
+        var overlay = document.createElement('div');
+        overlay.id = 'mobile-sidebar-overlay';
+        overlay.style.cssText = 'display:none;position:fixed;inset:0;z-index:998;background:rgba(0,0,0,0.3);';
+        document.body.appendChild(overlay);
+        overlay.addEventListener('click', closeSidebar);
+
+        function openSidebar() {
+            sidebar.style.display = 'flex';
+            sidebar.style.position = 'fixed';
+            sidebar.style.zIndex = '999';
+            sidebar.style.width = '280px';
+            sidebar.style.backgroundColor = '#ffffff';
+            sidebar.style.boxShadow = '4px 0 20px rgba(0,0,0,0.15)';
+            sidebar.style.top = '64px';
+            sidebar.style.left = '0';
+            sidebar.style.bottom = '0';
+            menuBtn.textContent = 'close';
+            overlay.style.display = 'block';
+        }
+
+        function closeSidebar() {
+            sidebar.style.display = '';
+            sidebar.style.position = '';
+            sidebar.style.zIndex = '';
+            sidebar.style.width = '';
+            sidebar.style.backgroundColor = '';
+            sidebar.style.boxShadow = '';
+            sidebar.style.top = '';
+            sidebar.style.left = '';
+            sidebar.style.bottom = '';
+            menuBtn.textContent = 'menu';
+            overlay.style.display = 'none';
+        }
+
+        menuBtn.addEventListener('click', function () {
+            if (sidebar.style.display === 'flex') {
+                closeSidebar();
+            } else {
+                openSidebar();
+            }
         });
     }
 
